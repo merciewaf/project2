@@ -1,0 +1,131 @@
+body{
+background: teal;
+}
+#msg{
+width: 100%;
+margin: 0px auto;
+background: seagreen;
+text-transform: capitalize;
+line-height: 39px;
+text-indent: 6px;
+color: whitesmoke;
+}
+#navigate{
+width: 100%;
+list-style: none;
+overflow: hidden;
+margin: 0px auto;
+background:white;
+padding: 0px;
+}
+.navi_sec{
+float:left;
+padding:5px;
+}
+.active{
+  border-bottom:2px solid tomato;
+}
+.navi_sec a{
+width: 100%;
+line-height: 24px;
+cursor:pointer;
+}
+  #userists{
+    width:100%;
+  margin:0px auto;
+  font-family:Tahoma,Arial,Verdana,sans-serif;
+  font-size:13px;
+  padding:4px;
+  cellpadding:0;
+  cellspacing:0
+  }
+  .head{
+  background:lightseagreen;
+  }
+ #userists tr td{
+    padding: 8px;
+  
+  border-bottom:1px solid #d1d1d1;
+  border-right:1px solid #d1d1d1;
+  } 
+ .head td{
+  border:0px !important;
+  }
+ 
+   .row{
+     overflow:hidden;
+   width:400px;
+   margin:0px auto;
+   }
+   .row label{
+   width: 100px;
+display: block;
+float: left;
+padding: 8px 2px;
+   }
+   
+   .row input[type='text'] {
+    width: 197px;
+float: left;
+padding: 7px 4px;
+border: 1px solid #f1f1d1;
+border-radius: 4px;
+color: black;
+   }
+  .hightlight{
+   border:1px solid #9F1319;
+  background:url(img/iconCaution.gif) no-repeat 2px !important;
+  }
+  .user_section{
+  width:600px;
+  margin:0px auto;
+  background:#f1f1f1;
+  padding: 0px 0px 1px 0px;
+  }
+   .pagination{
+  
+  margin:0px auto;
+  }
+  .pagination .current{
+  padding: 4px 10px;
+color: black;
+margin: 1px 0px 9px 6px;
+display: block;
+text-decoration:none;
+float: left;
+text-transform: capitalize;
+background: whitesmoke;
+  }
+  .pagination .page-numbers{
+  padding: 4px 10px;
+color: white !important;
+margin: 1px 0px 9px 6px;
+display: block;
+text-decoration:none;
+float: left;
+text-transform: capitalize;
+background: #00b4cc;
+  }
+  .red{
+  color: red;
+  }
+  
+   #mhead{
+background-color: #f5f5f5;
+border: 1px solid #e3e3e3;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+text-align: center; 
+font-family: georgia;
+position: fixed;
+top: 0px;
+width: 100%;
+} 
+
+#container{
+position: relative;
+margin-top: 100px;}
