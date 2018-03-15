@@ -19,8 +19,8 @@ $result = mysqli_query($conn,$sql);
 			<form name="frmUser" method="post" action="">
 <div style="width: 45% align-content: center; margin-left: 5%; margin-right: 5%;">
 <div class="message"><?php if(isset($message)) { echo $message; } ?></div>
-<div align="right" style="padding-bottom:5px;"><a href="add_guestlink.php" class="link"><img alt='Add' title='Add' src='images/add.png' width='15px' height='15px'/> NEW</a></div>
-<table border="0" cellpadding="10" cellspacing="2" width="920px" class="tblListForm">
+<div align="right" style="padding-bottom:5px;"><a href="add_guestlink.php" class="btn btn-info btn-sm"> <span class="glyphicon glyphicon-plus"></span> NEW</a></div>
+<table border="0" cellpadding="10" cellspacing="2" width="920px" class="table">
 <tr class="listheader">
 <td>No</td>
 <td>Source</td>
@@ -49,9 +49,9 @@ $classname="oddRow";
 <td><?php echo $row["receive_time"]; ?></td>
 <td><?php echo $row["status"]; ?></td>
 
-<td><a href=action_guestlink.php?gl_id=<?php echo $row["gl_id"]; ?>" class="link">Take Action</a></td>
+<td><a href=action_guestlink.php?gl_id=<?php echo $row["gl_id"]; ?>" class="btn btn-primary btn-xs" role="button">Take Action</a></td>
 <td>
-<a href="edit_guestlink.php?gl_id=<?php echo $row["gl_id"]; ?>" class="link"><img alt='Edit' title='Edit' src='images/edit.png' width='15px' height='15px' hspace='10' /></a>  <a href="delete_guestlink.php?gl_id=<?php echo $row["gl_id"]; ?>"  class="link"><img alt='Delete' title='Delete' src='images/delete.png' width='15px' height='15px'hspace='10' /></a></td>
+<a href="edit_guestlink.php?gl_id=<?php echo $row["gl_id"]; ?>" class="link"><span class="glyphicon glyphicon-pencil"></span></a> &nbsp; &nbsp; <a href="delete_guestlink.php?gl_id=<?php echo $row["gl_id"]; ?>"  class="link"> <span class="glyphicon glyphicon-trash"></span></a></td>
 </tr>
 <?php
 $i++;

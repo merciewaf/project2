@@ -20,7 +20,7 @@ $result = mysqli_query($conn,$sql);
 <div style="width: 35%px; align-content: center; margin-left: 15%; margin-right: 25%">
 <div class="message"><?php if(isset($message)) { echo $message; } ?></div>
 <div align="right" style="padding-bottom:5px;"><a href="add_staff.php" class="link"><img alt='Add' title='Add' src='images/add.png' width='15px' height='15px'/> </a></div>
-<table border="0" cellpadding="10" cellspacing="1" width="100%" class="tblListForm">
+<table border="0" cellpadding="10" cellspacing="1" width="100%" class="table">
 <tr class="listheader">
 <td>Organization Name</td>
 <td>Address</td>

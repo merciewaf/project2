@@ -1,15 +1,3 @@
-<?php
-require_once("db.php");
-if(count($_POST)>0) {
-	$sql = "UPDATE sections set section_name='" . $_POST["section_name"] . "', department='" . $_POST["department"] . "', reaction_time='" . $_POST["reaction_time"] . "', notes='" . $_POST["notes"] . "' WHERE sec_id='" . $_POST["sec_id"] . "'";
-	mysqli_query($conn,$sql);
-	$message = "Record Modified Successfully";
-}
-$select_query = "SELECT * FROM sections WHERE sec_id='" . $_GET["sec_id"] . "'";
-$result = mysqli_query($conn,$select_query);
-$row = mysqli_fetch_array($result);
-?>
-
 <html>
 <head>
 <title>Bizoft</title>
@@ -22,6 +10,17 @@ $row = mysqli_fetch_array($result);
 		</div>
 		<div class="col-sm-9">
 			<?php include_once 'header.php' ;?>
+			<?php
+require_once("db.php");
+if(count($_POST)>0) {
+	$sql = "UPDATE sections set section_name='" . $_POST["section_name"] . "', department='" . $_POST["department"] . "', reaction_time='" . $_POST["reaction_time"] . "', notes='" . $_POST["notes"] . "' WHERE sec_id='" . $_POST["sec_id"] . "'";
+	mysqli_query($conn,$sql);
+	$message = "Record Modified Successfully";
+}
+$select_query = "SELECT * FROM sections WHERE sec_id='" . $_GET["sec_id"] . "'";
+$result = mysqli_query($conn,$select_query);
+$row = mysqli_fetch_array($result);
+?>
 			<form name="frmUser" method="post" action="">
 <div class="form">
 <div class="message"><?php if(isset($message)) { echo $message; } ?></div>
@@ -33,14 +32,14 @@ $row = mysqli_fetch_array($result);
 </tr>
 <tr>
 <td><label>Section</label></td>
-<td><input type="hidden" name="section_name" class="txtField" value="<?php echo $row['section_name()']; ?>"><input type="text" name="section_name" class="txtField" value="<?php echo $row['section_name']; ?>"></td>
+<td><input type="hidden" name="section_name" class="txtField" value="<?php echo $row['sec_id']; ?>"><input type="text" name="section_name" class="txtField" value="<?php echo $row['section_name']; ?>"></td>
 </tr>
 <tr>
 <td><label>Department/label></td>
-<td><input type="text" name="password" class="txtField" value="<?php echo $row['department']; ?>"></td>
+<td><input type="text" name="department_name" class="txtField" value="<?php echo $row['dep_id']; ?>"></td>
 </tr>
 <td><label>Reaction Time</label></td>
-<td><input type="text" name="firstName" class="txtField" value="<?php echo $row['reaction_time']; ?>"></td>
+<td><input type="text" name="reaction_time" class="txtField" value="<?php echo $row['reaction_time']; ?>"></td>
 </tr>
 <td><label>Notes</label></td>
 <td><input type="text" name="lastName" class="txtField" value="<?php echo $row['notes']; ?>"></td>

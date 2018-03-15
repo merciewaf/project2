@@ -20,6 +20,7 @@ $result = mysqli_query($conn,$sql);
 			<div class="row">
 				<fieldset>
 				<div class="col-sm-3">
+					<div style="border-radius:3px; border:#cdcdcd solid 1px; padding:22px;">
 					<h5> Unreported Requests</h5>
 					<?php
 $con = mysql_connect("localhost", "root", "");
@@ -37,10 +38,14 @@ echo mysql_num_rows($result);
 mysql_close($con);
 ?>
 <br>
-<button type="button" class="btn btn-primary btn-sm"><a href="guestlink.php">VIEW ALL </a></button>
+<br>
+
+<a href="guestlink.php" class="btn btn-info" role="button">VIEW ALL</a>
 
 				</div>
+			</div>
 				<div class="col-sm-3">
+					<div style="border-radius:3px; border:#cdcdcd solid 1px; padding:22px;">
 					<h5>Requests awaiting Action</h5>
 					<?php
 $con = mysql_connect("localhost", "root", "");
@@ -58,9 +63,12 @@ echo mysql_num_rows($result);
 mysql_close($con);
 ?>
 <br>
-<button type="button" class="btn btn-primary btn-sm"><a href="viewaction_guestlink.php">VIEW ALL </a></button>
+<br>
+<a href="viewaction_guestlink.php" class="btn btn-info" role="button">VIEW ALL</a>
 				</div>
+			</div>
 				<div class="col-sm-3">
+					<div style="border-radius:3px; border:#cdcdcd solid 1px; padding:22px;">
 					<h5>Requests awaiting Feedback</h5>
 					<?php
 $con = mysql_connect("localhost", "root", "");
@@ -78,9 +86,12 @@ echo mysql_num_rows($result);
 mysql_close($con);
 ?>
 <br>
-<button type="button" class="btn btn-primary btn-sm"><a href="viewfeedback_guestlink.php">VIEW ALL </a></button>
+
+<a href="viewfeedback_guestlink.php" class="btn btn-info" role="button">VIEW ALL</a>
 				</div>
+			</div>
 				<div class="col-sm-3">
+					<div style="border-radius:3px; border:#cdcdcd solid 1px; padding:22px;">
 					<h5>Completed Requests</h5>
 					<?php
 $con = mysql_connect("localhost", "root", "");
@@ -98,8 +109,10 @@ echo mysql_num_rows($result);
 mysql_close($con);
 ?>
 <br>
-<button type="button" class="btn btn-primary btn-sm"><a href="complete_guestlink.php">VIEW ALL </a></button>
+<br>
+<a href="viewcomplete_guestlink.php" class="btn btn-info" role="button">VIEW ALL</a>
 				</div>
+			</div>
 
 			</div>
 			

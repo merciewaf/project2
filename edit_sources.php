@@ -1,15 +1,3 @@
-<?php
-require_once("db.php");
-if(count($_POST)>0) {
-	$sql = "UPDATE sources set source_name='" . $_POST["source_name"] . "', notes='" . $_POST["notes"] . "' WHERE src_id='" . $_POST["src_id"] . "'";
-	mysqli_query($conn,$sql);
-	$message = "Record Modified Successfully";
-}
-$select_query = "SELECT * FROM sources WHERE src_id='" . $_GET["src_id"] . "'";
-$result = mysqli_query($conn,$select_query);
-$row = mysqli_fetch_array($result);
-?>
-
 <html>
 <head>
 <title>Bizoft</title>
@@ -22,6 +10,17 @@ $row = mysqli_fetch_array($result);
 		</div>
 		<div class="col-sm-9">
 			<?php include_once 'header.php' ;?>
+			<?php
+require_once("db.php");
+if(count($_POST)>0) {
+	$sql = "UPDATE sources set source_name='" . $_POST["source_name"] . "', notes='" . $_POST["notes"] . "' WHERE src_id='" . $_POST["src_id"] . "'";
+	mysqli_query($conn,$sql);
+	$message = "Record Modified Successfully";
+}
+$select_query = "SELECT * FROM sources WHERE src_id='" . $_GET["src_id"] . "'";
+$result = mysqli_query($conn,$select_query);
+$row = mysqli_fetch_array($result);
+?>
 			<form name="frmUser" method="post" action="">
 <div class="form">
 <div class="message"><?php if(isset($message)) { echo $message; } ?></div>
@@ -33,11 +32,11 @@ $row = mysqli_fetch_array($result);
 </tr>
 <tr>
 <td><label>Sources</label></td>
-<td><input type="hidden" name="userId" class="txtField" value="<?php echo $row['source_name']; ?>"><input type="text" name="source_name" class="txtField" value="<?php echo $row['source_name']; ?>"></td>
+<td><input type="hidden" name="src_id" class="txtField" value="<?php echo $row['src_id']; ?>"><input type="source_name" name="source_name" class="txtField" value="<?php echo $row['source_name']; ?>"></td>
 </tr>
 <tr>
 <td><label>Notes</label></td>
-<td><input type="text" name="text" class="txtField" value="<?php echo $row['notes']; ?>"></td>
+<td><input type="text" name="notes" class="txtField" value="<?php echo $row['notes']; ?>"></td>
 </tr>
 
 <tr>

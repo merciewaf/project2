@@ -1,7 +1,10 @@
 <?php
+echo $user_name;
 if(count($_POST)>0) {
 	require_once("db.php");
 	$sql = "INSERT INTO sources (source_name, notes) VALUES ('" . $_POST[source_name] . "','" . $_POST["notes"] . "')";
+	mysqli_query($conn,$sql);
+	$sql = "INSERT INTO activity_log (user_name, date, action) VALUES ('" . $_POST[user_id] . "', NOW(), 'Added a room')";
 	mysqli_query($conn,$sql);
 	$current_id = mysqli_insert_id($conn);
 	if(!empty($current_id)) {
